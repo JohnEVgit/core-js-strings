@@ -37,10 +37,14 @@ const getStringLength = (value) => {
  *   isString('test') => true
  *   isString(new String('test')) => true
  */
-function isString(/* value */) {
-  throw new Error('Not implemented');
-}
-
+const isString = (value) => {
+  return (
+    typeof value === 'string' ||
+    (typeof value === 'object' &&
+      value !== null &&
+      typeof value.valueOf() === 'string')
+  );
+};
 /**
  * Returns the result of concatenation of two strings.
  *
