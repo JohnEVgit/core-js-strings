@@ -45,6 +45,7 @@ const isString = (value) => {
       typeof value.valueOf() === 'string')
   );
 };
+
 /**
  * Returns the result of concatenation of two strings.
  *
@@ -57,9 +58,9 @@ const isString = (value) => {
  *   concatenateStrings('aa', '') => 'aa'.
  *   concatenateStrings('', 'bb') => 'bb'
  */
-function concatenateStrings(/* value1, value2 */) {
-  throw new Error('Not implemented');
-}
+const concatenateStrings = (value1, value2) => {
+  return value1.concat(value2);
+};
 
 /**
  * Returns the first character of the given string.
