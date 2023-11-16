@@ -198,9 +198,15 @@ const removeLastOccurrences = (str, value) => {
  *   sumOfCodes('') => 0
  *   sumOfCodes() => 0
  */
-function sumOfCodes(/* str */) {
-  throw new Error('Not implemented');
-}
+const sumOfCodes = (str) => {
+  if (str) {
+    return str
+      .split('')
+      .reduce((acc, current) => acc + current.charCodeAt(), 0);
+  }
+
+  return 0;
+};
 
 /**
  * Checks if a string starts with a specific substring.
