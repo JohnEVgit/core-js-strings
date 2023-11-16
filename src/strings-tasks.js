@@ -176,9 +176,15 @@ const removeFirstOccurrences = (str, value) => {
  *   removeLastOccurrences('I like legends', 'end') => 'I like legs'.
  *   removeLastOccurrences('ABABAB', 'BA') => 'ABAB'.
  */
-function removeLastOccurrences(/* str, value */) {
-  throw new Error('Not implemented');
-}
+const removeLastOccurrences = (str, value) => {
+  const pos = str.lastIndexOf(value);
+
+  if (pos !== -1) {
+    return str.slice(0, pos) + str.slice(pos + value.length);
+  }
+
+  return str;
+};
 
 /**
  * Calculate the sum of character codes of the given string.
