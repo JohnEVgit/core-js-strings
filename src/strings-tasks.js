@@ -502,9 +502,24 @@ const extractEmails = (str) => {
  *    => 'NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm'
  *
  */
-function encodeToRot13(/* str */) {
-  throw new Error('Not implemented');
-}
+const encodeToRot13 = (str) => {
+  return str
+    .split('')
+    .map((value) => {
+      if (value.charCodeAt() >= 65 && value.charCodeAt() <= 90) {
+        return value.charCodeAt() < 78
+          ? String.fromCharCode(value.charCodeAt() + 13)
+          : String.fromCharCode(value.charCodeAt() - 13);
+      }
+      if (value.charCodeAt() >= 97 && value.charCodeAt() <= 122) {
+        return value.charCodeAt() < 110
+          ? String.fromCharCode(value.charCodeAt() + 13)
+          : String.fromCharCode(value.charCodeAt() - 13);
+      }
+      return value;
+    })
+    .join('');
+};
 
 /**
  * Returns playid card id.
