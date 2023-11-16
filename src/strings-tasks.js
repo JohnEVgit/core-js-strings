@@ -465,9 +465,7 @@ const extractNameFromTemplate = (value) => value.slice(7, -1);
  *   unbracketTag('<span>') => 'span'
  *   unbracketTag('<a>') => 'a'
  */
-function unbracketTag(/* str */) {
-  throw new Error('Not implemented');
-}
+const unbracketTag = (str) => str.slice(1, -1);
 
 /**
  * Extracts e-mails from single string with e-mails list delimited by semicolons
