@@ -118,9 +118,9 @@ const removeLeadingWhitespaces = (value) => {
  *   removeTrailingWhitespaces('cat ') => 'cat'
  *   removeTrailingWhitespaces('\t\t\tHello, World! ') => '\t\t\tHello, World!'
  */
-function removeTrailingWhitespaces(/* value */) {
-  throw new Error('Not implemented');
-}
+const removeTrailingWhitespaces = (value) => {
+  return value.trimEnd();
+};
 
 /**
  * Returns a string that is repeated the specified number of times.
