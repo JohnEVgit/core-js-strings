@@ -400,9 +400,11 @@ const findLongestWord = (sentence) => {
  *   reverseWords('Hello World') => 'olleH dlroW'
  *   reverseWords('The Quick Brown Fox') => 'ehT kciuQ nworB xoF'
  */
-function reverseWords(/* str */) {
-  throw new Error('Not implemented');
-}
+const reverseWords = (str) =>
+  str
+    .split(' ')
+    .map((value) => value.split('').reverse().join(''))
+    .join(' ');
 
 /**
  * Inverts the case of each character in the given string.
