@@ -234,9 +234,9 @@ const startsWith = (str, substr) => {
  *   endsWith('Hello World', 'World') => true
  *   endsWith('Hello World', 'Hello') => false
  */
-function endsWith(/* str, substr */) {
-  throw new Error('Not implemented');
-}
+const endsWith = (str, substr) => {
+  return str.endsWith(substr);
+};
 
 /**
  * Returns a time string in the "mm:ss" format.
