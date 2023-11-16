@@ -135,9 +135,12 @@ const removeTrailingWhitespaces = (value) => {
  *   repeatString('', 3) => ''
  *   repeatString('abc', -2) => ''
  */
-function repeatString(/* str, times */) {
-  throw new Error('Not implemented');
-}
+const repeatString = (str, times) => {
+  if (times > 0) {
+    return str.repeat(times);
+  }
+  return '';
+};
 
 /**
  * Remove the first occurrence of a substring from a string.
