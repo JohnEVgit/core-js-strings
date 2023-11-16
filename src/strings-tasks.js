@@ -88,9 +88,9 @@ const getFirstChar = (value) => {
  *   removeLeadingAndTrailingWhitespaces('cat ') => 'cat'
  *   removeLeadingAndTrailingWhitespaces('\t\t\tHello, World! ') => 'Hello, World!'
  */
-function removeLeadingAndTrailingWhitespaces(/* value */) {
-  throw new Error('Not implemented');
-}
+const removeLeadingAndTrailingWhitespaces = (value) => {
+  return value.trim();
+};
 
 /**
  * Removes only leading whitespace characters from the string.
