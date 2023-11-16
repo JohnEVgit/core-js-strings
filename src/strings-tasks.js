@@ -482,9 +482,9 @@ const unbracketTag = (str) => str.slice(1, -1);
  *   ],
  *   'info@gmail.com' => ['info@gmail.com']
  */
-function extractEmails(/* str */) {
-  throw new Error('Not implemented');
-}
+const extractEmails = (str) => {
+  return str.split(';');
+};
 
 /**
  * Encode specified string with ROT13 cipher
