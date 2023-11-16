@@ -103,9 +103,9 @@ const removeLeadingAndTrailingWhitespaces = (value) => {
  *   removeLeadingWhitespaces('cat ') => 'cat '
  *   removeLeadingWhitespaces('\t\t\tHello, World! ') => 'Hello, World! '
  */
-function removeLeadingWhitespaces(/* value */) {
-  throw new Error('Not implemented');
-}
+const removeLeadingWhitespaces = (value) => {
+  return value.trimStart();
+};
 
 /**
  * Removes only trailing whitespace characters from the string.
