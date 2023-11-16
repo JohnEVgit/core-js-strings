@@ -417,9 +417,14 @@ const reverseWords = (str) =>
  *   invertCase('JavaScript is Fun') => 'jAVAsCRIPT IS fUN'
  *   invertCase('12345') => '12345'
  */
-function invertCase(/* str */) {
-  throw new Error('Not implemented');
-}
+const invertCase = (str) => {
+  return str
+    .split('')
+    .map((value) =>
+      value.toUpperCase() === value ? value.toLowerCase() : value.toUpperCase()
+    )
+    .join('');
+};
 
 /**
  * Returns the result of string template and given parameters firstName and lastName.
