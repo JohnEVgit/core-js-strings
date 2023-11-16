@@ -313,9 +313,13 @@ const containsSubstring = (str, substring) => {
  *   countVowels('aEiOu') => 5
  *   countVowels('XYZ') => 1
  */
-function countVowels(/* str */) {
-  throw new Error('Not implemented');
-}
+const countVowels = (str) => {
+  const vowels = ['a', 'e', 'i', 'o', 'u', 'y', 'A', 'E', 'I', 'O', 'U', 'Y'];
+
+  return str
+    .split('')
+    .reduce((acc, current) => (vowels.includes(current) ? acc + 1 : acc), 0);
+};
 
 /**
  * Returns true if the string is a palindrome; otherwise false.
