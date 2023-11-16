@@ -154,9 +154,15 @@ const repeatString = (str, times) => {
  *   removeFirstOccurrences('I like legends', 'end') => 'I like legs'.
  *   removeFirstOccurrences('ABABAB', 'BA') => 'ABAB'.
  */
-function removeFirstOccurrences(/* str, value */) {
-  throw new Error('Not implemented');
-}
+const removeFirstOccurrences = (str, value) => {
+  const pos = str.indexOf(value);
+
+  if (pos !== -1) {
+    return str.slice(0, pos) + str.slice(pos + value.length);
+  }
+
+  return str;
+};
 
 /**
  * Remove the last occurrence of a substring from a string.
